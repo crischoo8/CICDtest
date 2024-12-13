@@ -54,5 +54,5 @@ jobs:
         with:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
           message: "level 13, free coffee"
-          username: Cristelle
+  
           
