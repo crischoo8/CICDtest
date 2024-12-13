@@ -53,6 +53,8 @@ jobs:
         uses: discord-actions/message@v2
         with:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          message: "level 13, free coffee"
+          message: "your order will arrive in 5 mins"
+          username: "Pandamart"
+          avatar: "https://images.deliveryhero.io/image/foodpanda/groceries-landing/pandamart.png"
   
           
