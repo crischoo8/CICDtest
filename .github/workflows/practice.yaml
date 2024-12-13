@@ -18,5 +18,10 @@ jobs:
       - name: what is go version
         run:
           go version
-          ls
-          go test
+          
+      - name: List files
+        run: ls 
+
+      # Run Go tests
+      - name: Run Go tests
+        run: go test
