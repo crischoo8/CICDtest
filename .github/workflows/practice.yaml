@@ -55,4 +55,4 @@ jobs:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
           message: "level 13, free coffee"
           username: Cristelle
-          avatar: "https://www.royalcupcoffee.com/sites/default/files/images/blog/AdobeStock_159183621update.jpg"
+          
