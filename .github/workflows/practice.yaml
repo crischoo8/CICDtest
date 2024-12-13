@@ -1,19 +1,19 @@
-# name: test CI
-# on:
-#   push:
-#     branches: [main]
+name: test CI
+on:
+  push:
+    branches: [main]
 
-# jobs:
-#   builds:
-#     runs-on: ubuntu-latest
-#     name: my build
-#     steps: 
-#       - name: Check out code
-#         uses: actions/checkout@v4
-#       - name: Setup Go
-#         uses: actions/setup-go@v5.2.0
-#         with:
-#           go-version: 1.23.0
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    name: my build
+    steps: 
+      # - name: Check out code
+      #   uses: actions/checkout@v4
+      # - name: Setup Go
+      #   uses: actions/setup-go@v5.2.0
+      #   with:
+      #     go-version: 1.23.0
           
 #       - name: what is go version
 #         run:
