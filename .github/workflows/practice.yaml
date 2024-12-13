@@ -53,6 +53,6 @@ jobs:
         uses: discord-actions/message@v2
         with:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          username: PantryTeam
           message: "level 13, free coffee"
+          username: Cristelle
           avatar: "https://www.royalcupcoffee.com/sites/default/files/images/blog/AdobeStock_159183621update.jpg"
