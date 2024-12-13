@@ -49,12 +49,19 @@ jobs:
 #         run:
 #           ls
 
+      # - name: Notify Discord
+      #   uses: discord-actions/message@v2
+      #   with:
+      #     webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      #     message: "your order will arrive in 5 mins"
+      #     username: "Pandamart"
+      #     avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
       - name: Notify Discord
         uses: discord-actions/message@v2
         with:
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          message: "your order will arrive in 5 mins"
-          username: "Pandamart"
-          avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+            message: "Hello, from Githave"
+            username: "Github"
+            avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
         
           
