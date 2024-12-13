@@ -55,6 +55,5 @@ jobs:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
           message: "your order will arrive in 5 mins"
           username: "Pandamart"
-          avatar: "https://images.deliveryhero.io/image/foodpanda/groceries-landing/pandamart.png"
-  
+        
           
