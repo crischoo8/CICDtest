@@ -13,7 +13,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5.2.0
         with:
-          go-version: 1.17.0
+          go-version: 1.23.0
           
       - name: what is go version
         run:
@@ -22,6 +22,6 @@ jobs:
       - name: List files
         run: ls 
 
-      # Run Go tests
+
       - name: Run Go tests
         run: go test
