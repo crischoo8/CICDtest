@@ -44,4 +44,7 @@ jobs:
       - name: go back to parent directory
         run: 
           cd ..
+
+      - name: list out items in parent directory
+        run:
           ls
