@@ -36,6 +36,12 @@ jobs:
       - name: List out hidden things
         run:
           ls
+          
+      - name: change to hidden folder
+        run: 
           cd hiddenFolder
-          ls
+
+      - name: go back to parent directory
+        run: 
           cd ..
+          ls
