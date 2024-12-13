@@ -24,4 +24,18 @@ jobs:
 
 
       - name: Run Go tests
-        run: go test
+        run: go test -cover
+
+      - name: Checkout private repo remotely
+        uses: actions/checkout@v4
+        with: 
+          repository: crischoo8/testCISecret
+          path: hiddenFolder
+          token: ${{ secrets.SECRETPAU }}
+
+      - name: List out hidden things
+        run:
+          ls
+          cd hiddenFolder
+          ls
+          cd ..
