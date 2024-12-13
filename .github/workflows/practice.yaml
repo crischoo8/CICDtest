@@ -8,6 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     name: my build
     steps: 
+      - name: Notify Discord
+        uses: discord-actions/message@v2
+        with:
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+            message: "Hello, from Githave"
+            username: "Github"
+            avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+      
       # - name: Check out code
       #   uses: actions/checkout@v4
       # - name: Setup Go
@@ -56,12 +64,5 @@ jobs:
       #     message: "your order will arrive in 5 mins"
       #     username: "Pandamart"
       #     avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-    - name: Notify Discord
-      uses: discord-actions/message@v2
-      with:
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          message: "Hello, from Githave"
-          username: "Github"
-          avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-      
+  
           
