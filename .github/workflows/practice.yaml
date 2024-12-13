@@ -1,50 +1,56 @@
-name: test CI
-on:
-  push:
-    branches: [main]
+# name: test CI
+# on:
+#   push:
+#     branches: [main]
 
-jobs:
-  builds:
-    runs-on: ubuntu-latest
-    name: my build
-    steps: 
-      - name: Check out code
-        uses: actions/checkout@v4
-      - name: Setup Go
-        uses: actions/setup-go@v5.2.0
+# jobs:
+#   builds:
+#     runs-on: ubuntu-latest
+#     name: my build
+#     steps: 
+#       - name: Check out code
+#         uses: actions/checkout@v4
+#       - name: Setup Go
+#         uses: actions/setup-go@v5.2.0
+#         with:
+#           go-version: 1.23.0
+          
+#       - name: what is go version
+#         run:
+#           go version
+          
+#       - name: List files
+#         run: ls 
+
+
+#       - name: Run Go tests
+#         run: go test -cover
+
+#       - name: Checkout private repo remotely
+#         uses: actions/checkout@v4
+#         with: 
+#           repository: crischoo8/testCISecret
+#           path: hiddenFolder
+#           token: ${{ secrets.SECRETPAU }}
+
+#       - name: List out hidden things
+#         run:
+#           ls
+          
+#       - name: change to hidden folder
+#         run: 
+#           cd hiddenFolder
+
+#       - name: go back to parent directory
+#         run: 
+#           cd ..
+
+#       - name: list out items in parent directory
+#         run:
+#           ls
+
+      - name: Notify Discord
+      - uses: discord-actions/message@v2
         with:
-          go-version: 1.23.0
-          
-      - name: what is go version
-        run:
-          go version
-          
-      - name: List files
-        run: ls 
-
-
-      - name: Run Go tests
-        run: go test -cover
-
-      - name: Checkout private repo remotely
-        uses: actions/checkout@v4
-        with: 
-          repository: crischoo8/testCISecret
-          path: hiddenFolder
-          token: ${{ secrets.SECRETPAU }}
-
-      - name: List out hidden things
-        run:
-          ls
-          
-      - name: change to hidden folder
-        run: 
-          cd hiddenFolder
-
-      - name: go back to parent directory
-        run: 
-          cd ..
-
-      - name: list out items in parent directory
-        run:
-          ls
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: "Hello, from Github"
